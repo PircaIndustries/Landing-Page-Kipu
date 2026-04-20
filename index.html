@@ -1,29 +1,50 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="author" content="PircaIndustries">
-    <meta name="description" content="Kipu Landing Page">
+    <meta name="description" content="Kipu Landing Page - Gestión fluida para constructoras">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--css-->
+
     <link rel="stylesheet" href="/styles/home-style.css">
     <link rel="stylesheet" href="/styles/proposal-style.css">
-    <!--title-->
-    <title>Kipu</title>
-    <!--favicon-->
+    <link rel="stylesheet" href="/styles/differences-style.css">
+    <link rel="stylesheet" href="/styles/header-style.css">
+
+    <title>Kipu - El estándar que impulsa tu obra</title>
+
     <link rel="icon" type="image/png" href="images/logoWithOutBackground.png">
+
     <script src="https://kit.fontawesome.com/350b7ab1bf.js" crossorigin="anonymous"></script>
-    <!--font-->
+    <script src="https://unpkg.com/lucide@latest"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <section class="home">
+<header class="main-header">
+    <div class="header-logo">
+        <img src="images/logoWithOutBackground.png" alt="Kipu Logo">
+    </div>
+    <nav class="main-navigation">
+        <ul class="nav-list">
+            <li><a href="#home">Inicio</a></li>
+            <li><a href="#proposal">Propuestas</a></li>
+            <li><a href="#differences">Características</a></li>
+            <li><a href="#team">Equipo</a></li>
+            <li><a href="#plans">Planes</a></li>
+            <li><a href="#contact">Contacto</a></li>
+            <li class="nav-action">
+                <button type="button" class="btn-login">Ingresar</button>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <section class="home" id="home">
         <div class="home-info">
             <div class="pretitle">
                 <p>Mínimo riesgo, máxima rentabilidad</p>
@@ -31,23 +52,27 @@
             <h1>El Centro de Control para tu Constructora.</h1>
             <p class="p-info">El aliado digital que transforma el caos de la construcción en orden total. Supervisa fallas de calidad al instante y gestiona tus recursos con la precisión que tus proyectos merecen.</p>
             <div class="btn-home-section">
-                <button class="btn-create-account">Crear Cuenta Gratuita <i class="fa-solid fa-arrow-right"></i></button>
-                <button class="btn-watch-demostration"><i class="fa-solid fa-play"></i> Ver Demostración</button>
+                <button type="button" class="btn-create-account">
+                    Crear Cuenta Gratuita <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                </button>
+                <button type="button" class="btn-watch-demostration">
+                    <i class="fa-solid fa-play" aria-hidden="true"></i> Ver Demostración
+                </button>
             </div>
         </div>
 
         <div class="home-image">
-            <img src="/images/home-photo.jpeg" alt="Foto de una ingeniera usando un programa tecnólógico para gestionar su obra.">
-            <div class="circle circle-top-right"></div>
-            <div class="circle circle-bottom-left"></div>
+            <img src="/images/home-photo.jpeg" alt="Ingeniera usando el software Kipu en una tablet para supervisión de obra">
+            <div class="circle circle-top-right" aria-hidden="true"></div>
+            <div class="circle circle-bottom-left" aria-hidden="true"></div>
         </div>
     </section>
 
-    <section class="proposal">
+    <section class="proposal" id="proposal">
         <div class="proposal-style">
             <div class="proposal-photo-wrapper">
-                <div class="proposal-photo-bg"></div>
-                <img src="/images/proposal-photo.jpg" alt="Foto de una ingeniera con malestar emocional">
+                <div class="proposal-photo-bg" aria-hidden="true"></div>
+                <img src="/images/proposal-photo.jpg" alt="Ingeniera civil analizando desafíos logísticos en construcción">
             </div>
         </div>
 
@@ -61,17 +86,73 @@
             </p>
 
             <ul class="proposal-benefits">
-                <li><span><i class="fa-solid fa-check"></i></span>Dominio</li>
-                <li><span><i class="fa-solid fa-check"></i></span>Trazabilidad</li>
-                <li><span><i class="fa-solid fa-check"></i></span>Eficiencia</li>
+                <li><span><i class="fa-solid fa-check" aria-hidden="true"></i></span>Dominio</li>
+                <li><span><i class="fa-solid fa-check" aria-hidden="true"></i></span>Trazabilidad</li>
+                <li><span><i class="fa-solid fa-check" aria-hidden="true"></i></span>Eficiencia</li>
             </ul>
         </div>
     </section>
 
-    <footer>
-        <p>© 2024 Kipu. Todos los derechos reservados.</p>
-    </footer>
+    <section class="differences" id="differences">
+        <div class="differences-introduction-titles">
+            <p>¿Qué nos diferencia?</p>
+            <h2 id="differences-title">El estándar que impulsa tu obra</h2>
+            <h3>Transformamos la complejidad técnica en una gestión fluida, centralizando cada decisión crítica de tu obra en una sola interfaz.</h3>
+        </div>
 
+        <div class="differences-group-cards">
+            <article class="differences-card">
+                <i data-lucide="package" aria-hidden="true"></i>
+                <h3>Control de RNC</h3>
+                <p>Reporta incidencias desde el campo y gestiona correcciones inmediatas para proteger tu cronograma.</p>
+            </article>
+
+            <article class="differences-card">
+                <i data-lucide="chart-column-increasing" aria-hidden="true"></i>
+                <h3>Analítica Predictiva</h3>
+                <p>Visualiza tendencias mediante indicadores clave para anticipar riesgos y evitar sobrecostos operativos.</p>
+            </article>
+
+            <article class="differences-card">
+                <i data-lucide="clipboard-check" aria-hidden="true"></i>
+                <h3>Validación de Presupuesto</h3>
+                <p>Automatiza aprobaciones de gastos y asegura la trazabilidad total de cada sol invertido.</p>
+            </article>
+
+            <article class="differences-card">
+                <i data-lucide="file-text" aria-hidden="true"></i>
+                <h3>Trazabilidad de Suministros</h3>
+                <p>Monitorea el ciclo de vida de materiales desde la compra hasta la obra evitando pérdidas.</p>
+            </article>
+
+            <article class="differences-card">
+                <i data-lucide="users" aria-hidden="true"></i>
+                <h3>Sincronización digital</h3>
+                <p>Conecta equipos remotos compartiendo planos y estados de avance en tiempo real sin fronteras.</p>
+            </article>
+
+            <article class="differences-card">
+                <i data-lucide="shield" aria-hidden="true"></i>
+                <h3>Document Security</h3>
+                <p>Mantén tus documentos de obra, de presupuesto y tus actas seguras con nuestro sistema de seguridad.</p>
+            </article>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>© 2024 Kipu. Todos los derechos reservados.</p>
+</footer>
+
+<script>
+    lucide.createIcons({
+        attrs: {
+            stroke: 'currentColor',
+            'stroke-width': 1.5,
+            class: 'lucide-icon'
+        }
+    });
+</script>
 </body>
 
 </html>

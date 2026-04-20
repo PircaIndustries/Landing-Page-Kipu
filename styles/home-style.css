@@ -1,12 +1,8 @@
 :root {
-    /* Tipografía principal */
     --text-primary: #212529;
-    /* Tono primario */
     --color-primary: #2C3E50;
-    /* Fondos y separadores */
     --bg-main: #F8F9FA;
     --color-divider: #B0BEC5;
-    /* Color de acento */
     --color-accent: #3498DB;
 }
 
@@ -14,7 +10,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: Inter;
+    font-family: 'Inter', sans-serif;
 }
 
 body {
@@ -31,10 +27,12 @@ body {
     padding: 2rem 5%;
     gap: 2rem;
     margin-bottom: 1rem;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6.0rem;
 }
 
 .home-info {
-    flex: 1 1 500px;
+    flex: 1 1 31.25rem;
     display: flex;
     flex-direction: column;
     padding: 1rem;
@@ -44,8 +42,8 @@ body {
     width: fit-content;
     padding: 1rem 2rem;
     background-color: var(--color-accent);
-    border-radius: 50px;
-    color: white;
+    border-radius: 3rem;
+    color: var(--bg-main);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -53,42 +51,43 @@ body {
 }
 
 .home-info .pretitle p {
-    font-size: 1.15rem;
+    font-size: 1.125rem;
+    font-weight: 600;
 }
 
 .home h1 {
     color: var(--text-primary);
     font-weight: 700;
-    font-size: clamp(2.5rem, 6vw, 6.2rem);
+    font-size: clamp(2.5rem, 6vw, 6.25rem);
     line-height: 1.1;
 }
 
 .home .p-info {
     color: var(--text-primary);
-    font-weight: 250;
-    font-size: clamp(1.1rem, 2vw, 2.2rem);
-    line-height: 50px;
+    font-weight: 400;
+    font-size: clamp(1.125rem, 2vw, 2.25rem);
+    line-height: 3rem;
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
 }
 
 .home-image {
-    flex: 1 1 400px;
+    flex: 1 1 25rem;
     background: linear-gradient(to bottom right, var(--color-primary), var(--color-accent));
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 20px;
+    border-radius: 1.5rem;
     padding: 2rem;
-    min-height: 300px;
+    min-height: 18.75rem;
     position: relative;
 }
 
 .home-image img {
     width: 95%;
     height: auto;
-    border-radius: 10px;
-    max-width: 700px;
+    border-radius: 0.5rem;
+    max-width: 43.75rem;
 }
 
 .btn-home-section {
@@ -99,37 +98,35 @@ body {
 
 .btn-home-section button {
     padding: 1.5rem 3rem;
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
-    border-radius: 10px;
+    gap: 0.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: filter 0.3s ease;
 }
 
 .btn-create-account {
-    font-weight: 400;
-    color: white;
+    font-weight: 500;
+    color: var(--bg-main);
     background-color: var(--color-accent);
     border: none;
 }
 
 .btn-watch-demostration {
-    border: 2px solid var(--color-accent);
-    background-color: white;
+    font-weight: 500;
+    border: 0.25rem solid var(--color-accent);
+    background-color: var(--bg-main);
     color: var(--color-primary);
 }
 
-.btn-create-account:hover {
-    filter: brightness(0.85);
+.btn-create-account:hover{
+    background-color: var(--color-primary);
 }
-
 .btn-watch-demostration:hover {
-    filter: brightness(0.85);
-}
-
-.btn-home-section button:hover {
-    cursor: pointer;
+    background-color: var(--color-divider);
 }
 
 .circle {
@@ -141,34 +138,31 @@ body {
 
 .circle-top-right {
     background-color: var(--color-accent);
-    width: 120px;
-    height: 120px;
-    top: -40px;
-    right: -40px;
+    width: 7.5rem;
+    height: 7.5rem;
+    top: -2.5rem;
+    right: -2.5rem;
 }
 
 .circle-bottom-left {
     background-color: var(--color-primary);
-    width: 160px;
-    height: 160px;
-    bottom: -40px;
-    left: -40px;
+    width: 10rem;
+    height: 10rem;
+    bottom: -2.5rem;
+    left: -2.5rem;
 }
 
 footer {
-    padding: 1.2rem 2rem;
+    padding: 1.5rem 2rem;
     background-color: var(--color-primary);
-    color: white;
+    color: var(--bg-main);
 }
 
 footer p {
     opacity: 0.6;
 }
 
-
-/*Media Queries*/
-
-@media (max-width: 768px) {
+@media (max-width: 48rem) {
     .home {
         padding: 2rem 1rem;
     }
