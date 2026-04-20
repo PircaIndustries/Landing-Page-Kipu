@@ -1,0 +1,259 @@
+/* Variables de color y fuente actualizadas según el README (Style Guidelines) */
+:root {
+    --color-accent: #3498DB;
+    --color-accent-hover: #2980b9;
+    --color-accent-light: #e3f2fd;
+    --color-primary-dark: #2C3E50;
+    --color-text-base: #212529;
+    --color-text-muted: #B0BEC5;
+    --color-bg-base: #F8F9FA;
+    --color-border: #e2e8f0;
+}
+
+/* Contenedor principal de la sección */
+.pricing-section {
+    background-color: var(--color-bg-base);
+    padding: 4rem 1rem;
+    font-family: 'Inter', sans-serif;
+    scroll-margin-top: 5rem;
+}
+
+.pricing-container {
+    margin: 0 auto;
+    max-width: 72rem;
+}
+
+/* Textos de cabecera */
+.pricing-header {
+    text-align: center;
+    max-width: 48rem;
+    margin: 0 auto 4rem auto;
+}
+
+.pricing-badge {
+    display: inline-block;
+    background-color: var(--color-accent);
+    color: #ffffff;
+    font-size: 0.875rem;
+    font-weight: 600;
+    padding: 0.25rem 1rem;
+    border-radius: 99rem;
+    margin-bottom: 1.5rem;
+}
+
+.pricing-title {
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: var(--color-primary-dark);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.pricing-subtitle {
+    font-size: 1.125rem;
+    color: var(--color-text-base);
+    margin: 0;
+}
+
+/* Grilla de tarjetas */
+.pricing-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+@media (min-width: 48rem) {
+    .pricing-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Estilos individuales de tarjeta */
+.pricing-card {
+    background: #ffffff;
+    border-radius: 1rem;
+    padding: 2rem;
+    border: 0.0625rem solid var(--color-border);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    box-shadow: 0 0.0625rem 0.25rem rgba(0,0,0,0.05);
+    /* Agregamos transform a la transición para que se anime suavemente */
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.pricing-card:hover {
+    box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.08);
+    /* Desplaza la tarjeta hacia arriba */
+    transform: translateY(-0.5rem);
+}
+
+.pricing-card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.pricing-card-header h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-primary-dark);
+    margin: 0;
+}
+
+.pricing-icon-wrapper {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: var(--color-accent-light);
+    color: var(--color-accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pricing-icon-solid {
+    background-color: var(--color-accent);
+    color: #ffffff;
+}
+
+.pricing-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.pricing-card-price {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 1rem;
+}
+
+.pricing-number {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: var(--color-text-base);
+    line-height: 1;
+}
+
+.pricing-number-custom {
+    font-size: 3rem;
+}
+
+.pricing-price-highlight .pricing-number {
+    color: var(--color-accent);
+}
+
+.pricing-month {
+    color: var(--color-text-muted);
+    font-weight: 500;
+    margin-left: 0.25rem;
+}
+
+.pricing-card-desc {
+    color: var(--color-text-base);
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+    height: 2.5rem;
+}
+
+/* Lista de características */
+.pricing-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem 0;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.pricing-features li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    color: var(--color-text-base);
+    font-size: 0.875rem;
+    line-height: 1.4;
+}
+
+.pricing-check {
+    width: 1.25rem;
+    height: 1.25rem;
+    color: var(--color-accent);
+    flex-shrink: 0;
+    margin-top: 0.25rem;
+}
+
+/* Botones */
+.pricing-btn {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.2s ease;
+}
+
+.pricing-btn-outline {
+    background-color: transparent;
+    border: 0.0625rem solid var(--color-accent);
+    color: var(--color-accent);
+}
+
+.pricing-btn-outline:hover {
+    background-color: var(--color-accent-light);
+}
+
+.pricing-btn-solid {
+    background-color: var(--color-accent);
+    border: 0.0625rem solid var(--color-accent);
+    color: #ffffff;
+}
+
+.pricing-btn-solid:hover {
+    background-color: var(--color-accent-hover);
+}
+
+/* Tarjeta destacada (Professional) */
+.pricing-card-popular {
+    padding: 0;
+    border: 0.125rem solid var(--color-primary-dark);
+    position: relative;
+    box-shadow: 0 1rem 1.5rem rgba(0,0,0,0.1);
+}
+
+@media (min-width: 48rem) {
+    .pricing-card-popular {
+        /* Estado normal: un poco más grande (scale) para destacarse */
+        transform: scale(1.05);
+        z-index: 10;
+    }
+
+    .pricing-card-popular:hover {
+        /* Estado hover: mantiene el scale pero añade la elevación */
+        transform: scale(1.05) translateY(-0.5rem);
+    }
+}
+
+.pricing-popular-label {
+    background-color: var(--color-accent);
+    color: #ffffff;
+    text-align: center;
+    padding: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    border-top-left-radius: 0.875rem;
+    border-top-right-radius: 0.875rem;
+}
+
+.pricing-card-inner {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 2.5rem);
+}
