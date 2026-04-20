@@ -1,0 +1,109 @@
+.differences {
+    background: var(--bg-main);
+    width: 100%;
+}
+
+.differences-introduction-titles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding:  2.5rem 2.5rem 2.5rem 2rem;
+}
+
+.differences-introduction-titles p {
+    background-color: var(--color-accent);
+    color: var(--bg-main);
+    width: fit-content;
+    font-size: 0.875rem;
+    border-radius: 3.125rem;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    margin: 1rem;
+    font-weight: 700;
+}
+
+.differences-introduction-titles h2 {
+    color: var(--color-primary);
+    font-size: 2rem;
+}
+
+.differences-introduction-titles h3 {
+    color: var(--text-primary);
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 1rem;
+    text-align: center;
+}
+
+.differences-group-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 2rem 4rem 4rem 4rem;
+    gap: 2.5rem; /* 40px */
+}
+
+.differences-card {
+    box-shadow: 0.125rem 0.125rem 0.3125rem var(--color-divider);
+    border-radius: 1rem;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.differences-card:hover {
+    background-color: var(--color-divider);
+    box-shadow: 0.125rem 0.125rem 0.625rem var(--color-divider);
+    transform: translateY(-0.5rem);
+}
+
+.differences-card h3 {
+    color: var(--color-primary);
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.differences-card p {
+    color: var(--text-primary);
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.lucide-icon {
+    width: 3rem;
+    height: 3rem;
+    margin-bottom: 1.5rem;
+    color: var(--bg-main);
+    background-color: var(--color-accent);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    display: block;
+}
+
+@media (max-width: 48rem){
+    .differences-introduction-titles {
+        padding: 2rem 1rem;
+    }
+
+    .differences-introduction-titles h1 {
+        font-size: 1.75rem;
+        text-align: center;
+    }
+
+    .differences-group-cards {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .differences-card {
+        padding: 1.5rem;
+    }
+
+    .lucide-icon {
+        width: 2.5rem;
+        height: 2.5rem;
+        margin-bottom: 1rem;
+    }
+}
