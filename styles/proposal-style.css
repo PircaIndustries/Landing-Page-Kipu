@@ -1,5 +1,6 @@
 .proposal {
 	width: 100%;
+	overflow-x: hidden;
 	background-color: var(--color-primary);
 	padding: 4.0rem 5%;
 	display: flex;

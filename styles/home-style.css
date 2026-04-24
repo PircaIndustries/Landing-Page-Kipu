@@ -78,6 +78,7 @@ body {
     justify-content: center;
     align-items: center;
     border-radius: 1.5rem;
+    overflow: hidden;
     padding: 2rem;
     min-height: 18.75rem;
     position: relative;
