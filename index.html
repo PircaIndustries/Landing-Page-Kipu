@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="utf-8">
     <meta name="author" content="PircaIndustries">
-    <meta name="description" content="Kipu Landing Page - Gestión fluida para constructoras">
+    <meta name="description" content="Kipu Landing Page - Gestion fluida para constructoras">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="/styles/home-style.css">
@@ -14,8 +14,9 @@
     <link rel="stylesheet" href="/styles/pricing-style.css">
     <link rel="stylesheet" href="/styles/roles-style.css">
     <link rel="stylesheet" href="/styles/team-style.css">
+    <link rel="stylesheet" href="/styles/contact-style.css">
 
-    <title>Kipu - El estándar que impulsa tu obra</title>
+    <title>Kipu - El estandar que impulsa tu obra</title>
 
     <link rel="icon" type="image/png" href="images/logoWithOutBackground.png">
 
@@ -32,16 +33,21 @@
     <div class="header-logo">
         <img src="images/logoWithOutBackground.png" alt="Kipu Logo">
     </div>
-    <nav class="main-navigation">
+    <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="main-navigation" data-i18n-aria-label="nav.toggleMenu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    <nav class="main-navigation" id="main-navigation">
         <ul class="nav-list">
-            <li><a href="#home">Inicio</a></li>
-            <li><a href="#proposal">Propuestas</a></li>
-            <li><a href="#differences">Características</a></li>
-            <li><a href="#team">Equipo</a></li>
-            <li><a href="#pricing">Planes</a></li>
-            <li><a href="#contact">Contacto</a></li>
+            <li><a href="#home" data-i18n="nav.home">Inicio</a></li>
+            <li><a href="#proposal" data-i18n="nav.proposal">Propuestas</a></li>
+            <li><a href="#differences" data-i18n="nav.features">Caracteristicas</a></li>
+            <li><a href="#team" data-i18n="nav.team">Equipo</a></li>
+            <li><a href="#pricing" data-i18n="nav.plans">Planes</a></li>
+            <li><a href="#contact" data-i18n="nav.contact">Contacto</a></li>
             <li class="nav-action">
-                <button type="button" class="btn-login">Ingresar</button>
+                <button type="button" class="btn-login" data-i18n="nav.login">Ingresar</button>
             </li>
         </ul>
     </nav>
@@ -50,22 +56,22 @@
     <section class="home" id="home">
         <div class="home-info">
             <div class="pretitle">
-                <p>Mínimo riesgo, máxima rentabilidad</p>
+                <p data-i18n="home.pretitle">Minimo riesgo, maxima rentabilidad</p>
             </div>
-            <h1>El Centro de Control para tu Constructora.</h1>
-            <p class="p-info">El aliado digital que transforma el caos de la construcción en orden total. Supervisa fallas de calidad al instante y gestiona tus recursos con la precisión que tus proyectos merecen.</p>
+            <h1 data-i18n="home.title">El Centro de Control para tu Constructora.</h1>
+            <p class="p-info" data-i18n="home.description">El aliado digital que transforma el caos de la construccion en orden total. Supervisa fallas de calidad al instante y gestiona tus recursos con la precision que tus proyectos merecen.</p>
             <div class="btn-home-section">
                 <button type="button" class="btn-create-account">
-                    Crear Cuenta Gratuita <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                    <span data-i18n="home.ctaPrimary">Crear Cuenta Gratuita</span> <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
                 </button>
                 <button type="button" class="btn-watch-demostration">
-                    <i class="fa-solid fa-play" aria-hidden="true"></i> Ver Demostración
+                    <i class="fa-solid fa-play" aria-hidden="true"></i> <span data-i18n="home.ctaSecondary">Ver Demostracion</span>
                 </button>
             </div>
         </div>
 
         <div class="home-image">
-            <img src="/images/home-photo.jpeg" alt="Ingeniera usando el software Kipu en una tablet para supervisión de obra">
+            <img src="/images/home-photo.jpeg" alt="Ingeniera usando el software Kipu en una tablet para supervision de obra" data-i18n-alt="home.imageAlt">
             <div class="circle circle-top-right" aria-hidden="true"></div>
             <div class="circle circle-bottom-left" aria-hidden="true"></div>
         </div>
@@ -75,69 +81,67 @@
         <div class="proposal-style">
             <div class="proposal-photo-wrapper">
                 <div class="proposal-photo-bg" aria-hidden="true"></div>
-                <img src="/images/proposal-photo.jpg" alt="Ingeniera civil analizando desafíos logísticos en construcción">
+                <img src="/images/proposal-photo.jpg" alt="Ingeniera civil analizando desafios logisticos en construccion" data-i18n-alt="proposal.imageAlt">
             </div>
         </div>
 
         <div class="proposal-info">
-            <span class="proposal-badge">Descubre Kipu</span>
-            <h2>Evita los errores, céntrate en lo importante.</h2>
-            <p>
-                Sabemos que la falta de control en los reportes de calidad y los errores en el flujo logístico
-                generan sobrecostos millonarios. Kipu centraliza la comunicación entre la oficina y el campo
-                para que nada se escape.
+            <span class="proposal-badge" data-i18n="proposal.badge">Descubre Kipu</span>
+            <h2 data-i18n="proposal.title">Evita los errores, centrate en lo importante.</h2>
+            <p data-i18n="proposal.description">
+                Sabemos que la falta de control en los reportes de calidad y los errores en el flujo logistico generan sobrecostos millonarios. Kipu centraliza la comunicacion entre la oficina y el campo para que nada se escape.
             </p>
 
             <ul class="proposal-benefits">
-                <li><span><i class="fa-solid fa-check" aria-hidden="true"></i></span>Dominio</li>
-                <li><span><i class="fa-solid fa-check" aria-hidden="true"></i></span>Trazabilidad</li>
-                <li><span><i class="fa-solid fa-check" aria-hidden="true"></i></span>Eficiencia</li>
+                <li><span class="benefit-check"><i class="fa-solid fa-check" aria-hidden="true"></i></span><span class="benefit-text" data-i18n="proposal.benefit1">Dominio</span></li>
+                <li><span class="benefit-check"><i class="fa-solid fa-check" aria-hidden="true"></i></span><span class="benefit-text" data-i18n="proposal.benefit2">Trazabilidad</span></li>
+                <li><span class="benefit-check"><i class="fa-solid fa-check" aria-hidden="true"></i></span><span class="benefit-text" data-i18n="proposal.benefit3">Eficiencia</span></li>
             </ul>
         </div>
     </section>
 
     <section class="differences" id="differences">
         <div class="differences-introduction-titles">
-            <p>¿Qué nos diferencia?</p>
-            <h2 id="differences-title">El estándar que impulsa tu obra</h2>
-            <h3>Transformamos la complejidad técnica en una gestión fluida, centralizando cada decisión crítica de tu obra en una sola interfaz.</h3>
+            <p data-i18n="differences.badge">Que nos diferencia?</p>
+            <h2 id="differences-title" data-i18n="differences.title">El estandar que impulsa tu obra</h2>
+            <h3 data-i18n="differences.description">Transformamos la complejidad tecnica en una gestion fluida, centralizando cada decision critica de tu obra en una sola interfaz.</h3>
         </div>
 
         <div class="differences-group-cards">
             <article class="differences-card">
                 <i data-lucide="package" aria-hidden="true"></i>
-                <h3>Control de RNC</h3>
-                <p>Reporta incidencias desde el campo y gestiona correcciones inmediatas para proteger tu cronograma.</p>
+                <h3 data-i18n="differences.card1Title">Control de RNC</h3>
+                <p data-i18n="differences.card1Desc">Reporta incidencias desde el campo y gestiona correcciones inmediatas para proteger tu cronograma.</p>
             </article>
 
             <article class="differences-card">
                 <i data-lucide="chart-column-increasing" aria-hidden="true"></i>
-                <h3>Analítica Predictiva</h3>
-                <p>Visualiza tendencias mediante indicadores clave para anticipar riesgos y evitar sobrecostos operativos.</p>
+                <h3 data-i18n="differences.card2Title">Analitica Predictiva</h3>
+                <p data-i18n="differences.card2Desc">Visualiza tendencias mediante indicadores clave para anticipar riesgos y evitar sobrecostos operativos.</p>
             </article>
 
             <article class="differences-card">
                 <i data-lucide="clipboard-check" aria-hidden="true"></i>
-                <h3>Validación de Presupuesto</h3>
-                <p>Automatiza aprobaciones de gastos y asegura la trazabilidad total de cada sol invertido.</p>
+                <h3 data-i18n="differences.card3Title">Validacion de Presupuesto</h3>
+                <p data-i18n="differences.card3Desc">Automatiza aprobaciones de gastos y asegura la trazabilidad total de cada sol invertido.</p>
             </article>
 
             <article class="differences-card">
                 <i data-lucide="file-text" aria-hidden="true"></i>
-                <h3>Trazabilidad de Suministros</h3>
-                <p>Monitorea el ciclo de vida de materiales desde la compra hasta la obra evitando pérdidas.</p>
+                <h3 data-i18n="differences.card4Title">Trazabilidad de Suministros</h3>
+                <p data-i18n="differences.card4Desc">Monitorea el ciclo de vida de materiales desde la compra hasta la obra evitando perdidas.</p>
             </article>
 
             <article class="differences-card">
                 <i data-lucide="users" aria-hidden="true"></i>
-                <h3>Sincronización digital</h3>
-                <p>Conecta equipos remotos compartiendo planos y estados de avance en tiempo real sin fronteras.</p>
+                <h3 data-i18n="differences.card5Title">Sincronizacion digital</h3>
+                <p data-i18n="differences.card5Desc">Conecta equipos remotos compartiendo planos y estados de avance en tiempo real sin fronteras.</p>
             </article>
 
             <article class="differences-card">
                 <i data-lucide="shield" aria-hidden="true"></i>
-                <h3>Document Security</h3>
-                <p>Mantén tus documentos de obra, de presupuesto y tus actas seguras con nuestro sistema de seguridad.</p>
+                <h3 data-i18n="differences.card6Title">Seguridad Documental</h3>
+                <p data-i18n="differences.card6Desc">Manten tus documentos de obra, de presupuesto y tus actas seguras con nuestro sistema de seguridad.</p>
             </article>
         </div>
     </section>
@@ -148,24 +152,24 @@
             <div class="role-icon">
                 <i class="fa-solid fa-users"></i>
             </div>
-            <h3>Equipos de Logística</h3>
-            <p>
-                Optimiza tus procesos hoy: solicita una demo y descubre cómo Kipu revoluciona tu logística operativa.
+            <h3 data-i18n="roles.card1Title">Equipos de Logistica</h3>
+            <p data-i18n="roles.card1Desc">
+                Optimiza tus procesos hoy: solicita una demo y descubre como Kipu revoluciona tu logistica operativa.
             </p>
             <button class="role-btn">
-                Solicitar Demostración →
+                <span data-i18n="roles.card1Btn">Solicitar Demostracion</span> ->
             </button>
         </article>
             <article class="role-card role-light">
                 <div class="role-icon">
                     <i class="fa-solid fa-chart-line"></i>
                 </div>
-                <h3>Gestores Operativos</h3>
-                <p>
-                    Mira Kipu en acción y transforma la gestión de tus proyectos con nuestra tecnología de validación en tiempo real.
+                <h3 data-i18n="roles.card2Title">Gestores Operativos</h3>
+                <p data-i18n="roles.card2Desc">
+                    Mira Kipu en accion y transforma la gestion de tus proyectos con nuestra tecnologia de validacion en tiempo real.
                 </p>
                 <button class="role-btn role-btn-light">
-                    Solicitar Demostración →
+                    <span data-i18n="roles.card2Btn">Solicitar Demostracion</span> ->
                 </button>
             </article>
         </div>
@@ -173,68 +177,68 @@
 
     <section class="team-section" id="team">
         <div class="team-header">
-            <span class="team-badge">Nuestro Equipo</span>
-            <h2>Los creadores de Kipu</h2>
-            <p>Quiénes somos y qué es lo que hacemos.</p>
+            <span class="team-badge" data-i18n="team.badge">Nuestro Equipo</span>
+            <h2 data-i18n="team.title">Los creadores de Kipu</h2>
+            <p data-i18n="team.description">Quienes somos y que es lo que hacemos.</p>
         </div>
         <div class="team-grid"> 
             <div class="team-row">
                 <article class="team-card">
                     <div class="team-avatar">
-                        <i class="fa-solid fa-user"></i>
+                        <img src="/images/profiles/neo.jpg" alt="Neo Ramos" data-i18n-alt="team.neoAlt">
                         <div class="team-icon">
                             <i class="fa-brands fa-git-alt"></i>
                         </div>
                     </div>
                     <h3>Neo Ramos</h3>
-                    <span class="team-role">Software Developer, UX/UI Designer</span>
-                    <p>Estudiante de Ingeniería de Software, experiencia con Javascript, Java y C#.</p>
+                    <span class="team-role" data-i18n="team.neoRole">Software Developer, UX/UI Designer</span>
+                    <p data-i18n="team.neoDesc">Estudiante de Ingenieria de Software, experiencia con Javascript, Java y C#.</p>
                 </article>
                 <article class="team-card">
                     <div class="team-avatar">
-                        <i class="fa-solid fa-user"></i>
+                        <img src="/images/profiles/paula.jpg" alt="Paula Montoya" data-i18n-alt="team.paulaAlt">
                         <div class="team-icon">
                             <i class="fa-brands fa-git-alt"></i>
                         </div>
                     </div>
                     <h3>Paula Montoya</h3>
-                    <span class="team-role">Software Architect</span>
-                    <p>Estudiante de Ingeniería de Software, experiencia en Python, JavaScript y C#.</p>
+                    <span class="team-role" data-i18n="team.paulaRole">Software Architect</span>
+                    <p data-i18n="team.paulaDesc">Estudiante de Ingenieria de Software, experiencia en Python, JavaScript y C#.</p>
                 </article>
                 <article class="team-card">
                     <div class="team-avatar">
-                        <i class="fa-solid fa-user"></i>
+                        <img src="/images/profiles/diego.jpg" alt="Diego Ramos" data-i18n-alt="team.diegoAlt">
                         <div class="team-icon">
                             <i class="fa-brands fa-git-alt"></i>
                         </div>
                     </div>
                     <h3>Diego Ramos</h3>
-                    <span class="team-role">Team Leader</span>
-                    <p>Estudiante de Ingeniería de Software, experiencia en React, JavaScript y Git.</p>
+                    <span class="team-role" data-i18n="team.diegoRole">Team Leader</span>
+                    <p data-i18n="team.diegoDesc">Estudiante de Ingenieria de Software, experiencia en React, JavaScript y Git.</p>
                 </article>
             </div>
             <div class="team-row team-row-bottom">
                 <article class="team-card">
                 <div class="team-avatar">
-                    <i class="fa-solid fa-user"></i>
+                    <img src="/images/profiles/manuel.jpg" alt="Jhony Francia" data-i18n-alt="team.jhonyAlt">
                     <div class="team-icon">
                         <i class="fa-brands fa-git-alt"></i>
                     </div>
                 </div>
                 <h3>Jhony Francia</h3>
-                <span class="team-role">Software Developer</span>
-                <p>Estudiante de Ingeniería de Software, experiencia en C#, HTML y SQL.</p>
+                <span class="team-role" data-i18n="team.jhonyRole">Software Developer</span>
+                <p data-i18n="team.jhonyDesc">Estudiante de Ingenieria de Software, experiencia en C#, HTML y SQL.</p>
             </article>
             <article class="team-card">
                 <div class="team-avatar">
-                    <i class="fa-solid fa-user"></i>
+                    <img src="/images/profiles/marcelo.jpg" alt="Adrian Palacios" data-i18n-alt="team.adrianAlt">
                     <div class="team-icon">
                         <i class="fa-brands fa-git-alt"></i>
                     </div>
                 </div>
                 <h3>Adrian Palacios</h3>
-                <span class="team-role">Domain Analyst</span>
-                <p>Estudiante de la carrera de Ingeniería de Software, experiencia con JavaScript, SQL, UML.</p>
+                <span class="team-role" data-i18n="team.adrianRole">Domain Analyst</span>
+                <p data-i18n="team.adrianDesc">Estudiante de la carrera de Ingenieria de Software, experiencia con JavaScript, SQL, UML.</p>
             </article>
             </div>
         </div>
@@ -245,9 +249,9 @@
 
             <!-- Encabezado Semántico -->
             <header class="pricing-header">
-                <span class="pricing-badge">Suscripciones</span>
-                <h2 class="pricing-title">Elige a Kipu, con un descuento especial.</h2>
-                <p class="pricing-subtitle">Las mejores funcionalidades a un precio razonable.</p>
+                <span class="pricing-badge" data-i18n="pricing.badge">Suscripciones</span>
+                <h2 class="pricing-title" data-i18n="pricing.title">Elige a Kipu, con un descuento especial.</h2>
+                <p class="pricing-subtitle" data-i18n="pricing.subtitle">Las mejores funcionalidades a un precio razonable.</p>
             </header>
 
             <!-- Tarjetas -->
@@ -263,33 +267,33 @@
                     </header>
                     <div class="pricing-card-price">
                         <span class="pricing-number">0</span>
-                        <span class="pricing-month">/mes</span>
+                        <span class="pricing-month" data-i18n="pricing.month">/mes</span>
                     </div>
-                    <p class="pricing-card-desc">La prueba definitiva que cambiará tu estilo de gestión.</p>
+                    <p class="pricing-card-desc" data-i18n="pricing.freeDesc">La prueba definitiva que cambiara tu estilo de gestion.</p>
                     <ul class="pricing-features">
                         <li>
                             <svg class="pricing-check" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                            Registro de hasta 10 RNC por mes
+                            <span data-i18n="pricing.freeFeature1">Registro de hasta 10 RNC por mes</span>
                         </li>
                         <li>
                             <svg class="pricing-check" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                            Acceso a modo campo offline
+                            <span data-i18n="pricing.freeFeature2">Acceso a modo campo offline</span>
                         </li>
                         <li>
                             <svg class="pricing-check" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                            Gestión para un solo proyecto
+                            <span data-i18n="pricing.freeFeature3">Gestion para un solo proyecto</span>
                         </li>
                         <li>
                             <svg class="pricing-check" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                            Almacenamiento limitado para fotos de evidencia
+                            <span data-i18n="pricing.freeFeature4">Almacenamiento limitado para fotos de evidencia</span>
                         </li>
                     </ul>
-                    <button type="button" class="pricing-btn pricing-btn-outline">Comenzar Gratis</button>
+                    <button type="button" class="pricing-btn pricing-btn-outline" data-i18n="pricing.freeBtn">Comenzar Gratis</button>
                 </article>
 
                 <!-- Tarjeta Professional (Destacada) -->
                 <article class="pricing-card pricing-card-popular">
-                    <div class="pricing-popular-label">Más Popular</div>
+                    <div class="pricing-popular-label" data-i18n="pricing.popular">Mas Popular</div>
                     <div class="pricing-card-inner">
                         <header class="pricing-card-header">
                             <div class="pricing-icon-wrapper pricing-icon-solid">
@@ -299,32 +303,32 @@
                         </header>
                         <div class="pricing-card-price pricing-price-highlight">
                             <span class="pricing-number">49</span>
-                            <span class="pricing-month">/mes</span>
+                            <span class="pricing-month" data-i18n="pricing.month">/mes</span>
                         </div>
-                        <p class="pricing-card-desc">Lo que tu obra necesita para progresar constantemente.</p>
+                        <p class="pricing-card-desc" data-i18n="pricing.proDesc">Lo que tu obra necesita para progresar constantemente.</p>
                         <ul class="pricing-features">
                             <li>
                                 <svg class="pricing-check" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                Gestión ilimitada de RNC
+                                <span data-i18n="pricing.proFeature1">Gestion ilimitada de RNC</span>
                             </li>
                             <li>
                                 <svg class="pricing-check" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                Validación presupuestaria en tiempo real.
+                                <span data-i18n="pricing.proFeature2">Validacion presupuestaria en tiempo real.</span>
                             </li>
                             <li>
                                 <svg class="pricing-check" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                Panel de Analítica Predictiva y KPIs de rendimiento por obra.
+                                <span data-i18n="pricing.proFeature3">Panel de Analitica Predictiva y KPIs de rendimiento por obra.</span>
                             </li>
                             <li>
                                 <svg class="pricing-check" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                Soporte para múltiples proyectos y roles de usuario
+                                <span data-i18n="pricing.proFeature4">Soporte para multiples proyectos y roles de usuario</span>
                             </li>
                             <li>
                                 <svg class="pricing-check" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                Almacenamiento escalable a las necesidades del proyecto
+                                <span data-i18n="pricing.proFeature5">Almacenamiento escalable a las necesidades del proyecto</span>
                             </li>
                         </ul>
-                        <button type="button" class="pricing-btn pricing-btn-solid">Comenzar Prueba</button>
+                        <button type="button" class="pricing-btn pricing-btn-solid" data-i18n="pricing.proBtn">Comenzar Prueba</button>
                     </div>
                 </article>
 
@@ -338,44 +342,116 @@
                     </header>
                     <div class="pricing-card-price">
                         <span class="pricing-number pricing-number-custom">Custom</span>
-                        <span class="pricing-month">/mes</span>
+                        <span class="pricing-month" data-i18n="pricing.month">/mes</span>
                     </div>
-                    <p class="pricing-card-desc">Una cotización especial para las empresas.</p>
+                    <p class="pricing-card-desc" data-i18n="pricing.enterpriseDesc">Una cotizacion especial para las empresas.</p>
                     <ul class="pricing-features">
                         <li>
                             <svg class="pricing-check" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                            Flexibilidad en el modelo de negocio
+                            <span data-i18n="pricing.enterpriseFeature1">Flexibilidad en el modelo de negocio</span>
                         </li>
                         <li>
                             <svg class="pricing-check" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                            Control de costos y escalabilidad
+                            <span data-i18n="pricing.enterpriseFeature2">Control de costos y escalabilidad</span>
                         </li>
                         <li>
                             <svg class="pricing-check" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                            Seguridad y propiedad de datos
+                            <span data-i18n="pricing.enterpriseFeature3">Seguridad y propiedad de datos</span>
                         </li>
                     </ul>
-                    <button type="button" class="pricing-btn pricing-btn-outline">Contactar Ventas</button>
+                    <button type="button" class="pricing-btn pricing-btn-outline" data-i18n="pricing.enterpriseBtn">Contactar Ventas</button>
                 </article>
 
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="contact-header">
+            <span class="contact-badge" data-i18n="contact.badge">Contacto</span>
+            <h2 data-i18n="contact.title">Comunicate con nosotros</h2>
+            <p data-i18n="contact.subtitle">Kipu se mantiene a la espera de nuevas empresas que esten interesadas en nuestro proyecto.</p>
+        </div>
+
+        <div class="contact-layout">
+            <article class="contact-form-card">
+                <h3 data-i18n="contact.formTitle">Envianos un mensaje</h3>
+                <form class="contact-form" action="#" method="post">
+                    <div class="contact-form-row">
+                        <div class="form-group">
+                            <label for="contact-name" data-i18n="contact.name">Nombre</label>
+                            <input id="contact-name" name="name" type="text" data-i18n-placeholder="contact.namePlaceholder" placeholder="Tu nombre">
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-lastname" data-i18n="contact.lastName">Apellido</label>
+                            <input id="contact-lastname" name="lastname" type="text" data-i18n-placeholder="contact.lastNamePlaceholder" placeholder="Tu apellido">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-email" data-i18n="contact.email">Email</label>
+                        <input id="contact-email" name="email" type="email" data-i18n-placeholder="contact.emailPlaceholder" placeholder="nombre@empresa.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-company" data-i18n="contact.company">Empresa</label>
+                        <input id="contact-company" name="company" type="text" data-i18n-placeholder="contact.companyPlaceholder" placeholder="Nombre de empresa">
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-message" data-i18n="contact.message">Mensaje</label>
+                        <textarea id="contact-message" name="message" rows="5" data-i18n-placeholder="contact.messagePlaceholder" placeholder="Escribe aqui tu mensaje"></textarea>
+                    </div>
+                    <button class="contact-submit" type="submit">
+                        <i class="fa-regular fa-paper-plane" aria-hidden="true"></i>
+                        <span data-i18n="contact.send">Enviar Mensaje</span>
+                    </button>
+                </form>
+            </article>
+
+            <div class="contact-side-column">
+                <article class="contact-info-card">
+                    <h3 data-i18n="contact.infoTitle">Informacion de contacto</h3>
+                    <div class="contact-info-list">
+                        <div class="contact-info-item">
+                            <span class="contact-icon"><i class="fa-regular fa-envelope"></i></span>
+                            <div>
+                                <h4 data-i18n="contact.email">Email</h4>
+                                <p>kipu_org@company.com</p>
+                                <p>kipu_support@company.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <span class="contact-icon"><i class="fa-solid fa-phone"></i></span>
+                            <div>
+                                <h4 data-i18n="contact.phone">Telefono</h4>
+                                <p>+1 (555) 123-4567 +1 (555) 987-6543</p>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <span class="contact-icon"><i class="fa-solid fa-location-dot"></i></span>
+                            <div>
+                                <h4 data-i18n="contact.address">Direccion</h4>
+                                <p data-i18n="contact.addressValue">123 Lima, Lima 12345</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="contact-map-card" aria-label="Ubicacion">
+                    <i data-lucide="map-pin"></i>
+                </article>
             </div>
         </div>
     </section>
 </main>
 
 <footer>
-    <p>© 2024 Kipu. Todos los derechos reservados.</p>
+    <p data-i18n="footer.copy">© 2024 Kipu. Todos los derechos reservados.</p>
 </footer>
 
-<script>
-    lucide.createIcons({
-        attrs: {
-            stroke: 'currentColor',
-            'stroke-width': 1.5,
-            class: 'lucide-icon'
-        }
-    });
-</script>
+<button class="language-toggle" id="language-toggle" type="button" aria-label="Switch language" data-i18n-aria-label="language.ariaLabel">
+    EN
+</button>
+
+<script src="/scripts/script.js"></script>
 </body>
 
 </html>
