@@ -123,7 +123,7 @@ const translations = {
 			addressValue: "123 Lima, Lima 12345"
 		},
 		footer: {
-			copy: "© 2024 Kipu. Todos los derechos reservados."
+			copy: "© 2026 Kipu. Todos los derechos reservados."
 		},
 		language: {
 			ariaLabel: "Cambiar idioma"
@@ -253,7 +253,7 @@ const translations = {
 			addressValue: "123 Lima, Lima 12345"
 		},
 		footer: {
-			copy: "© 2024 Kipu. All rights reserved."
+			copy: "© 2026 Kipu. All rights reserved."
 		},
 		language: {
 			ariaLabel: "Switch language"
