@@ -319,9 +319,21 @@ const applyTranslations = (language) => {
 
 	document.documentElement.lang = language;
 
-	const languageButton = document.getElementById("language-toggle");
-	if (languageButton) {
-		languageButton.textContent = language === "es" ? "EN" : "ES";
+	// Update active state in language switcher buttons
+	const btnEs = document.getElementById("lang-btn-es");
+	const btnEn = document.getElementById("lang-btn-en");
+	if (btnEs && btnEn) {
+		if (language === "es") {
+			btnEs.classList.add("active");
+			btnEn.classList.remove("active");
+			btnEs.setAttribute("aria-current", "true");
+			btnEn.removeAttribute("aria-current");
+		} else {
+			btnEn.classList.add("active");
+			btnEs.classList.remove("active");
+			btnEn.setAttribute("aria-current", "true");
+			btnEs.removeAttribute("aria-current");
+		}
 	}
 };
 
@@ -331,13 +343,23 @@ const initializeLanguage = () => {
 
 	applyTranslations(language);
 
-	const languageButton = document.getElementById("language-toggle");
-	if (languageButton) {
-		languageButton.addEventListener("click", () => {
-			const currentLanguage = document.documentElement.lang === "en" ? "en" : "es";
-			const nextLanguage = currentLanguage === "es" ? "en" : "es";
-			localStorage.setItem("kipu-language", nextLanguage);
-			applyTranslations(nextLanguage);
+	const btnEs = document.getElementById("lang-btn-es");
+	const btnEn = document.getElementById("lang-btn-en");
+
+	if (btnEs) {
+		btnEs.addEventListener("click", () => {
+			if (document.documentElement.lang !== "es") {
+				localStorage.setItem("kipu-language", "es");
+				applyTranslations("es");
+			}
+		});
+	}
+	if (btnEn) {
+		btnEn.addEventListener("click", () => {
+			if (document.documentElement.lang !== "en") {
+				localStorage.setItem("kipu-language", "en");
+				applyTranslations("en");
+			}
 		});
 	}
 };
