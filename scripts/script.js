@@ -7,7 +7,7 @@ const translations = {
 		nav: {
 			home: "Inicio",
 			proposal: "Propuestas",
-			features: "Caracteristicas",
+			features: "Características",
 			team: "Equipo",
 			plans: "Planes",
 			contact: "Contacto",
@@ -15,11 +15,11 @@ const translations = {
 			toggleMenu: "Abrir menu"
 		},
 		home: {
-			pretitle: "Minimo riesgo, maxima rentabilidad",
+			pretitle: "Mínimo riesgo, máxima rentabilidad",
 			title: "El Centro de Control para tu Constructora.",
 			description: "El aliado digital que transforma el caos de la construccion en orden total. Supervisa fallas de calidad al instante y gestiona tus recursos con la precision que tus proyectos merecen.",
 			ctaPrimary: "Crear Cuenta Gratuita",
-			ctaSecondary: "Ver Demostracion",
+			ctaSecondary: "Ver demostración",
 			imageAlt: "Ingeniera usando el software Kipu en una tablet para supervision de obra"
 		},
 		proposal: {
@@ -39,11 +39,11 @@ const translations = {
 			card1Desc: "Reporta incidencias desde el campo y gestiona correcciones inmediatas para proteger tu cronograma.",
 			card2Title: "Analitica Predictiva",
 			card2Desc: "Visualiza tendencias mediante indicadores clave para anticipar riesgos y evitar sobrecostos operativos.",
-			card3Title: "Validacion de Presupuesto",
+			card3Title: "Validación de presupuesto",
 			card3Desc: "Automatiza aprobaciones de gastos y asegura la trazabilidad total de cada sol invertido.",
 			card4Title: "Trazabilidad de Suministros",
 			card4Desc: "Monitorea el ciclo de vida de materiales desde la compra hasta la obra evitando perdidas.",
-			card5Title: "Sincronizacion digital",
+			card5Title: "Sincronización digital",
 			card5Desc: "Conecta equipos remotos compartiendo planos y estados de avance en tiempo real sin fronteras.",
 			card6Title: "Seguridad Documental",
 			card6Desc: "Manten tus documentos de obra, de presupuesto y tus actas seguras con nuestro sistema de seguridad."
@@ -117,10 +117,13 @@ const translations = {
 			message: "Mensaje",
 			messagePlaceholder: "Escribe aqui tu mensaje",
 			send: "Enviar Mensaje",
-			infoTitle: "Informacion de contacto",
-			phone: "Telefono",
-			address: "Direccion",
-			addressValue: "123 Lima, Lima 12345"
+			sending: "Enviando mensaje...",
+			successMessage: "Mensaje enviado correctamente.",
+			infoTitle: "Información de contacto",
+			phone: "Teléfono",
+			address: "Dirección",
+			addressValue: "123 Lima, Lima 12345",
+			mapPlaceholder: "Ubicación referencial disponible próximamente."
 		},
 		footer: {
 			copy: "© 2026 Kipu. Todos los derechos reservados."
@@ -247,10 +250,13 @@ const translations = {
 			message: "Message",
 			messagePlaceholder: "Type your message here",
 			send: "Send Message",
+			sending: "Sending message...",
+			successMessage: "Message sent successfully.",
 			infoTitle: "Contact information",
 			phone: "Phone",
 			address: "Address",
-			addressValue: "123 Lima, Lima 12345"
+			addressValue: "123 Lima, Lima 12345",
+			mapPlaceholder: "Reference location available soon."
 		},
 		footer: {
 			copy: "© 2026 Kipu. All rights reserved."
@@ -394,6 +400,40 @@ const initializeMobileNav = () => {
 	});
 };
 
+const initializeContactForm = () => {
+	const form = document.querySelector(".contact-form");
+	const submitBtn = document.querySelector(".contact-submit");
+	
+	if (!form || !submitBtn) return;
+
+	form.addEventListener("submit", (e) => {
+		e.preventDefault(); // Prevent 405 error
+		
+		const currentLang = document.documentElement.lang || "es";
+		const dict = translations[currentLang]?.contact || translations.es.contact;
+		
+		const btnTextSpan = submitBtn.querySelector("span");
+		const originalText = btnTextSpan.textContent;
+		
+		// Set sending state
+		submitBtn.disabled = true;
+		btnTextSpan.textContent = dict.sending;
+		
+		// Simulate API call
+		setTimeout(() => {
+			btnTextSpan.textContent = dict.successMessage;
+			form.reset();
+			
+			// Revert back after 3 seconds
+			setTimeout(() => {
+				submitBtn.disabled = false;
+				btnTextSpan.textContent = dict.send; // Will be re-translated correctly on lang change
+				applyTranslations(document.documentElement.lang || "es"); // Reapply translation to get original text back
+			}, 3000);
+		}, 1500);
+	});
+};
+
 document.addEventListener("DOMContentLoaded", () => {
 	if (window.lucide) {
 		window.lucide.createIcons({
@@ -407,4 +447,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	initializeLanguage();
 	initializeMobileNav();
+	initializeContactForm();
 });

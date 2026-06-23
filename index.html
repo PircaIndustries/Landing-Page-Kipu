@@ -47,7 +47,7 @@
             <ul class="nav-list">
                 <li><a href="#home" data-i18n="nav.home">Inicio</a></li>
                 <li><a href="#proposal" data-i18n="nav.proposal">Propuestas</a></li>
-                <li><a href="#differences" data-i18n="nav.features">Caracteristicas</a></li>
+                <li><a href="#differences" data-i18n="nav.features">Características</a></li>
                 <li><a href="#team" data-i18n="nav.team">Equipo</a></li>
                 <li><a href="#pricing" data-i18n="nav.plans">Planes</a></li>
                 <li><a href="#contact" data-i18n="nav.contact">Contacto</a></li>
@@ -69,7 +69,7 @@
         <section class="home" id="home">
             <div class="home-info">
                 <div class="pretitle">
-                    <p data-i18n="home.pretitle">Minimo riesgo, maxima rentabilidad</p>
+                    <p data-i18n="home.pretitle">Mínimo riesgo, máxima rentabilidad</p>
                 </div>
                 <h1 data-i18n="home.title">El Centro de Control para tu Constructora.</h1>
                 <p class="p-info" data-i18n="home.description">El aliado digital que transforma el caos de la
@@ -84,7 +84,7 @@
                     <button type="button" class="btn-watch-demostration"
                         onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })">
                         <i class="fa-solid fa-play" aria-hidden="true"></i> <span data-i18n="home.ctaSecondary">Ver
-                            Demostracion</span>
+                            demostración</span>
                     </button>
                 </div>
             </div>
@@ -153,7 +153,7 @@
 
                 <article class="differences-card">
                     <i data-lucide="clipboard-check" aria-hidden="true"></i>
-                    <h3 data-i18n="differences.card3Title">Validacion de Presupuesto</h3>
+                    <h3 data-i18n="differences.card3Title">Validación de presupuesto</h3>
                     <p data-i18n="differences.card3Desc">Automatiza aprobaciones de gastos y asegura la trazabilidad
                         total de cada sol invertido.</p>
                 </article>
@@ -167,7 +167,7 @@
 
                 <article class="differences-card">
                     <i data-lucide="users" aria-hidden="true"></i>
-                    <h3 data-i18n="differences.card5Title">Sincronizacion digital</h3>
+                    <h3 data-i18n="differences.card5Title">Sincronización digital</h3>
                     <p data-i18n="differences.card5Desc">Conecta equipos remotos compartiendo planos y estados de avance
                         en tiempo real sin fronteras.</p>
                 </article>
@@ -370,7 +370,7 @@
                                 <h3>Professional</h3>
                             </header>
                             <div class="pricing-card-price pricing-price-highlight">
-                                <span class="pricing-number">49</span>
+                                <span class="pricing-number">S/ 49</span>
                                 <span class="pricing-month" data-i18n="pricing.month">/mes</span>
                             </div>
                             <p class="pricing-card-desc" data-i18n="pricing.proDesc">Lo que tu obra necesita para
@@ -487,18 +487,18 @@
                             <div class="form-group">
                                 <label for="contact-name" data-i18n="contact.name">Nombre</label>
                                 <input id="contact-name" name="name" type="text"
-                                    data-i18n-placeholder="contact.namePlaceholder" placeholder="Tu nombre">
+                                    data-i18n-placeholder="contact.namePlaceholder" placeholder="Tu nombre" required>
                             </div>
                             <div class="form-group">
                                 <label for="contact-lastname" data-i18n="contact.lastName">Apellido</label>
                                 <input id="contact-lastname" name="lastname" type="text"
-                                    data-i18n-placeholder="contact.lastNamePlaceholder" placeholder="Tu apellido">
+                                    data-i18n-placeholder="contact.lastNamePlaceholder" placeholder="Tu apellido" required>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="contact-email" data-i18n="contact.email">Email</label>
                             <input id="contact-email" name="email" type="email"
-                                data-i18n-placeholder="contact.emailPlaceholder" placeholder="nombre@empresa.com">
+                                data-i18n-placeholder="contact.emailPlaceholder" placeholder="nombre@empresa.com" required>
                         </div>
                         <div class="form-group">
                             <label for="contact-company" data-i18n="contact.company">Empresa</label>
@@ -509,7 +509,7 @@
                             <label for="contact-message" data-i18n="contact.message">Mensaje</label>
                             <textarea id="contact-message" name="message" rows="5"
                                 data-i18n-placeholder="contact.messagePlaceholder"
-                                placeholder="Escribe aqui tu mensaje"></textarea>
+                                placeholder="Escribe aqui tu mensaje" required></textarea>
                         </div>
                         <button class="contact-submit" type="submit">
                             <i class="fa-regular fa-paper-plane" aria-hidden="true"></i>
@@ -520,7 +520,7 @@
 
                 <div class="contact-side-column">
                     <article class="contact-info-card">
-                        <h3 data-i18n="contact.infoTitle">Informacion de contacto</h3>
+                        <h3 data-i18n="contact.infoTitle">Información de contacto</h3>
                         <div class="contact-info-list">
                             <div class="contact-info-item">
                                 <span class="contact-icon"><i class="fa-regular fa-envelope"></i></span>
@@ -533,14 +533,14 @@
                             <div class="contact-info-item">
                                 <span class="contact-icon"><i class="fa-solid fa-phone"></i></span>
                                 <div>
-                                    <h4 data-i18n="contact.phone">Telefono</h4>
+                                    <h4 data-i18n="contact.phone">Teléfono</h4>
                                     <p>+1 (555) 123-4567 +1 (555) 987-6543</p>
                                 </div>
                             </div>
                             <div class="contact-info-item">
                                 <span class="contact-icon"><i class="fa-solid fa-location-dot"></i></span>
                                 <div>
-                                    <h4 data-i18n="contact.address">Direccion</h4>
+                                    <h4 data-i18n="contact.address">Dirección</h4>
                                     <p data-i18n="contact.addressValue">123 Lima, Lima 12345</p>
                                 </div>
                             </div>
@@ -548,7 +548,10 @@
                     </article>
 
                     <article class="contact-map-card" aria-label="Ubicacion">
-                        <i data-lucide="map-pin"></i>
+                        <div class="map-placeholder-content" style="text-align: center; padding: 2rem;">
+                            <i data-lucide="map-pin"></i>
+                            <p data-i18n="contact.mapPlaceholder" style="margin-top: 1rem; color: #64748b;">Ubicación referencial disponible próximamente.</p>
+                        </div>
                     </article>
                 </div>
             </div>
