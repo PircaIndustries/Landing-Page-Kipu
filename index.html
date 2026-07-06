@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="./styles/roles-style.css">
     <link rel="stylesheet" href="./styles/team-style.css">
     <link rel="stylesheet" href="./styles/contact-style.css">
+    <link rel="stylesheet" href="./styles/footer-style.css">
 
     <title>Kipu - El estandar que impulsa tu obra</title>
 
@@ -82,7 +83,7 @@
                             class="fa-solid fa-arrow-right" aria-hidden="true"></i>
                     </button>
                     <button type="button" class="btn-watch-demostration"
-                        onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })">
+                        onclick="document.getElementById('product-video').scrollIntoView({ behavior: 'smooth' })">
                         <i class="fa-solid fa-play" aria-hidden="true"></i> <span data-i18n="home.ctaSecondary">Ver
                             demostración</span>
                     </button>
@@ -179,6 +180,12 @@
                         seguras con nuestro sistema de seguridad.</p>
                 </article>
             </div>
+
+            <div id="product-video" class="video-container" style="max-width: 800px; margin: 4rem auto 0 auto; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); width: 100%; padding: 0 20px; box-sizing: border-box;">
+                <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px;">
+                    <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/4Hg37dS6P7k" title="Kipu Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
         </section>
 
         <section class="roles-section">
@@ -192,10 +199,9 @@
                         Optimiza tus procesos hoy: solicita una demo y descubre como Kipu revoluciona tu logistica
                         operativa.
                     </p>
-                    <button class="role-btn"
-                        onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })">
+                    <a href="#contact" class="role-btn" style="text-decoration: none; display: inline-block; text-align: center; box-sizing: border-box;">
                         <span data-i18n="roles.card1Btn">Solicitar Demostracion</span> ->
-                    </button>
+                    </a>
                 </article>
                 <article class="role-card role-light">
                     <div class="role-icon">
@@ -206,10 +212,9 @@
                         Mira Kipu en accion y transforma la gestion de tus proyectos con nuestra tecnologia de
                         validacion en tiempo real.
                     </p>
-                    <button class="role-btn role-btn-light"
-                        onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })">
+                    <a href="#contact" class="role-btn role-btn-light" style="text-decoration: none; display: inline-block; text-align: center; box-sizing: border-box;">
                         <span data-i18n="roles.card2Btn">Solicitar Demostracion</span> ->
-                    </button>
+                    </a>
                 </article>
             </div>
         </section>
@@ -285,6 +290,12 @@
                         <p data-i18n="team.adrianDesc">Estudiante de la carrera de Ingenieria de Software, experiencia
                             con JavaScript, SQL, UML.</p>
                     </article>
+                </div>
+            </div>
+
+            <div class="video-container" style="max-width: 800px; margin: 4rem auto 0 auto; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); width: 100%; padding: 0 20px; box-sizing: border-box;">
+                <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px;">
+                    <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/EE2ACWZMpxY" title="Kipu Team" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
         </section>
@@ -557,11 +568,44 @@
             </div>
         </section>
     </main>
-
-<footer>
-    <p data-i18n="footer.copy">© 2026 Kipu. Todos los derechos reservados.</p>
+<footer class="main-footer">
+    <div class="footer-container">
+        <div class="footer-brand">
+            <img src="./images/logoWithOutBackground.png" alt="Kipu Logo" class="footer-logo">
+            <p data-i18n="footer.description">El aliado digital que transforma el caos de la construccion en orden total.</p>
+            <div class="footer-social">
+                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="footer-links">
+            <h4 data-i18n="footer.companyTitle">Empresa</h4>
+            <ul>
+                <li><a href="#home" data-i18n="nav.home">Inicio</a></li>
+                <li><a href="#differences" data-i18n="nav.features">Características</a></li>
+                <li><a href="#team" data-i18n="nav.team">Equipo</a></li>
+                <li><a href="#pricing" data-i18n="nav.plans">Planes</a></li>
+            </ul>
+        </div>
+        <div class="footer-links">
+            <h4 data-i18n="footer.legalTitle">Legal</h4>
+            <ul>
+                <li><a href="#" data-i18n="footer.terms">Términos de Servicio</a></li>
+                <li><a href="#" data-i18n="footer.privacy">Política de Privacidad</a></li>
+                <li><a href="#" data-i18n="footer.cookies">Uso de Cookies</a></li>
+            </ul>
+        </div>
+        <div class="footer-contact">
+            <h4 data-i18n="footer.contactTitle">Contacto</h4>
+            <p><i class="fa-regular fa-envelope"></i> kipu_org@company.com</p>
+            <p><i class="fa-solid fa-phone"></i> +1 (555) 123-4567</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p data-i18n="footer.copy">© 2026 Kipu. Todos los derechos reservados.</p>
+    </div>
 </footer>
-
 
     <script src="./scripts/script.js"></script>
 </body>

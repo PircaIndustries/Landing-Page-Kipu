@@ -126,7 +126,14 @@ const translations = {
 			mapPlaceholder: "Ubicación referencial disponible próximamente."
 		},
 		footer: {
-			copy: "© 2026 Kipu. Todos los derechos reservados."
+			copy: "© 2026 Kipu. Todos los derechos reservados.",
+			description: "El aliado digital que transforma el caos de la construccion en orden total.",
+			companyTitle: "Empresa",
+			legalTitle: "Legal",
+			terms: "Términos de Servicio",
+			privacy: "Política de Privacidad",
+			cookies: "Uso de Cookies",
+			contactTitle: "Contacto"
 		},
 		language: {
 			ariaLabel: "Cambiar idioma"
@@ -259,7 +266,14 @@ const translations = {
 			mapPlaceholder: "Reference location available soon."
 		},
 		footer: {
-			copy: "© 2026 Kipu. All rights reserved."
+			copy: "© 2026 Kipu. All rights reserved.",
+			description: "The digital ally that transforms construction chaos into full control.",
+			companyTitle: "Company",
+			legalTitle: "Legal",
+			terms: "Terms of Service",
+			privacy: "Privacy Policy",
+			cookies: "Cookie Policy",
+			contactTitle: "Contact"
 		},
 		language: {
 			ariaLabel: "Switch language"
